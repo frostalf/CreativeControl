@@ -48,7 +48,7 @@ public class CreativeBlockManager {
     private static CoreLRUCache<String, CreativeBlockData> cache;
 
     public CreativeBlockManager() {
-        cache = new CoreLRUCache<String, CreativeBlockData>(CreativeControl.getMainConfig().cache_capacity);
+        cache = new CoreLRUCache<>(CreativeControl.getMainConfig().cache_capacity);
     }
     
     public CoreLRUCache<String, CreativeBlockData> getCache() {
@@ -128,7 +128,7 @@ public class CreativeBlockManager {
 
         try {
 
-            List<World> worldsx = new ArrayList<World>(Bukkit.getWorlds());
+            List<World> worldsx = new ArrayList<>(Bukkit.getWorlds());
             Collections.reverse(worldsx);
 
             for (World world : worldsx) {
@@ -184,7 +184,7 @@ public class CreativeBlockManager {
         
         int total = 0;
 
-        List<World> worlds = new ArrayList<World>(Bukkit.getWorlds());
+        List<World> worlds = new ArrayList<>(Bukkit.getWorlds());
 
         for (World world : worlds) {
             try {

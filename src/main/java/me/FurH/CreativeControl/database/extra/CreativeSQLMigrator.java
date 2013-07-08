@@ -125,7 +125,7 @@ public class CreativeSQLMigrator implements Runnable {
         move_friends();
         
         /* move blocks */
-        List<String> tables = new ArrayList<String>();
+        List<String> tables = new ArrayList<>();
 
         for (World world : Bukkit.getWorlds()) {
             tables.add(db.prefix+"blocks_" + world.getName());

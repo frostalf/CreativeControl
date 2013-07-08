@@ -34,8 +34,8 @@ import org.bukkit.entity.Player;
  */
 public class CreativeSQLUpdater implements Runnable {
     
-    private HashSet<String> convert = new HashSet<String>();
-    private HashSet<String> tables = new HashSet<String>();
+    private HashSet<String> convert = new HashSet<>();
+    private HashSet<String> tables = new HashSet<>();
     private CreativeControl plugin;
     public static boolean lock = false;
     private Player p;
@@ -59,7 +59,7 @@ public class CreativeSQLUpdater implements Runnable {
         
         CreativeSQLDatabase db = CreativeControl.getDb();
 
-        List<String> thistables = new ArrayList<String>();
+        List<String> thistables = new ArrayList<>();
         thistables.add(db.prefix + "players_survival");
         thistables.add(db.prefix + "players_creative");
         thistables.add(db.prefix + "players_adventurer");

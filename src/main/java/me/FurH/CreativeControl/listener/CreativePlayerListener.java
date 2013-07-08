@@ -65,8 +65,8 @@ import org.bukkit.inventory.ItemStack;
  */
 public class CreativePlayerListener implements Listener {
 
-    public static HashSet<String> changed = new HashSet<String>();
-    private HashSet<String> dontdrop = new HashSet<String>();
+    public static HashSet<String> changed = new HashSet<>();
+    private HashSet<String> dontdrop = new HashSet<>();
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerGameModeChange(PlayerGameModeChangeEvent e) {
@@ -852,7 +852,7 @@ public class CreativePlayerListener implements Listener {
         
         if (insql) {
             owner = data1.owner;
-            allowed = new ArrayList<String>(data1.allowed).toString();
+            allowed = new ArrayList<>(data1.allowed).toString();
             type = data1.type;
             date = data1.date;
         }
@@ -863,7 +863,7 @@ public class CreativePlayerListener implements Listener {
             }
             
             if (data2.allowed != null) {
-                allowed = new ArrayList<String>(data2.allowed).toString();
+                allowed = new ArrayList<>(data2.allowed).toString();
             }
             
             type = data2.type;

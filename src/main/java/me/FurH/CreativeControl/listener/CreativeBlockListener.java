@@ -300,7 +300,7 @@ public class CreativeBlockListener implements Listener {
             }
         }
         
-        List<Block> attached = new ArrayList<Block>();
+        List<Block> attached = new ArrayList<>();
 
         if (config.block_nodrop || config.block_ownblock) {
             

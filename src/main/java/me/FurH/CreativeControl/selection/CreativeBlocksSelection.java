@@ -161,7 +161,7 @@ public class CreativeBlocksSelection {
                                 if (data != null) {
                                     if (data.owner.equalsIgnoreCase(player.getName())) {
                                         String mod = args.toLowerCase();
-                                        HashSet<String> als = new HashSet<String>();
+                                        HashSet<String> als = new HashSet<>();
 
                                         if (data.allowed != null) {
                                             als = data.allowed;

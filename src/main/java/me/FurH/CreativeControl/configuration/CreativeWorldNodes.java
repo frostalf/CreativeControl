@@ -29,16 +29,16 @@ public class CreativeWorldNodes {
     public boolean  world_exclude         = false;
     public boolean  world_changegm        = false;
     
-    public HashSet<String> black_cmds       = new HashSet<String>();//Arrays.asList(new String[] { "/buy", "/sell", "/logout" });
-    public HashSet<String> black_s_cmds     = new HashSet<String>();
+    public HashSet<String> black_cmds       = new HashSet<>();//Arrays.asList(new String[] { "/buy", "/sell", "/logout" });
+    public HashSet<String> black_s_cmds     = new HashSet<>();
     
-    public HashSet<CreativeItemStack> black_place     = new HashSet<CreativeItemStack>();//Arrays.asList(new Integer[] { 8, 9, 10, 11, 46, 51, 52, 79 });
-    public HashSet<CreativeItemStack> black_break     = new HashSet<CreativeItemStack>();//Arrays.asList(new Integer[] { });
-    public HashSet<CreativeItemStack> black_use       = new HashSet<CreativeItemStack>();//Arrays.asList(new Integer[] { 259, 326, 327, 384, 385 });
-    public HashSet<CreativeItemStack> black_interact  = new HashSet<CreativeItemStack>();//Arrays.asList(new Integer[] { 23, 54, 58, 61, 62, 63, 68, 84, 116, 117, 130, 138, 145 });
-    public HashSet<CreativeItemStack> black_inventory = new HashSet<CreativeItemStack>();//Arrays.asList(new Integer[] { });
+    public HashSet<CreativeItemStack> black_place     = new HashSet<>();//Arrays.asList(new Integer[] { 8, 9, 10, 11, 46, 51, 52, 79 });
+    public HashSet<CreativeItemStack> black_break     = new HashSet<>();//Arrays.asList(new Integer[] { });
+    public HashSet<CreativeItemStack> black_use       = new HashSet<>();//Arrays.asList(new Integer[] { 259, 326, 327, 384, 385 });
+    public HashSet<CreativeItemStack> black_interact  = new HashSet<>();//Arrays.asList(new Integer[] { 23, 54, 58, 61, 62, 63, 68, 84, 116, 117, 130, 138, 145 });
+    public HashSet<CreativeItemStack> black_inventory = new HashSet<>();//Arrays.asList(new Integer[] { });
     
-    public HashSet<String> black_sign       = new HashSet<String>();//Arrays.asList(new String[] { "buy", "sell", "trade" });
+    public HashSet<String> black_sign       = new HashSet<>();//Arrays.asList(new String[] { "buy", "sell", "trade" });
     public boolean black_sign_all        = false;
     
     public boolean misc_tnt              = false;
@@ -57,7 +57,7 @@ public class CreativeWorldNodes {
     public boolean block_against         = false;
     public boolean block_attach          = false;
     public boolean block_invert          = false;
-    public HashSet<CreativeItemStack> block_exclude   = new HashSet<CreativeItemStack>();//Arrays.asList(new Integer[] { 0, 8, 9, 10, 11 });
+    public HashSet<CreativeItemStack> block_exclude   = new HashSet<>();//Arrays.asList(new Integer[] { 0, 8, 9, 10, 11 });
     
     public boolean prevent_drop          = true;
     public boolean prevent_pickup        = true;

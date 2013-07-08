@@ -34,7 +34,7 @@ import org.bukkit.entity.Player;
  * @author FurmigaHumana
  */
 public class CreativePlayerFriends {
-    private CoreSafeCache<String, HashSet<String>> hascache = new CoreSafeCache<String, HashSet<String>>();
+    private CoreSafeCache<String, HashSet<String>> hascache = new CoreSafeCache<>();
     
     public void uncache(Player p) {
         hascache.remove(p.getName().toLowerCase());
@@ -49,7 +49,7 @@ public class CreativePlayerFriends {
         
         hascache.put(player, friends);
 
-        List<String> newFriends = new ArrayList<String>(friends);
+        List<String> newFriends = new ArrayList<>(friends);
         String query = "UPDATE `"+db.prefix+"friends` SET friends = '"+newFriends+"' WHERE player = '"+db.getPlayerId(player.toLowerCase())+"'";
 
         try {
@@ -76,7 +76,7 @@ public class CreativePlayerFriends {
                 if (rs.next()) {
                     friends = CreativeUtil.toStringHashSet(rs.getString("friends"), ", ");
                 } else {
-                    friends = new HashSet<String>();
+                    friends = new HashSet<>();
                     db.execute("INSERT INTO `"+db.prefix+"friends` (player, friends) VALUES ('"+ db.getPlayerId(player.toLowerCase()) +"', '[]');");
                 }
 

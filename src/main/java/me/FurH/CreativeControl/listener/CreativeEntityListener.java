@@ -52,7 +52,7 @@ import org.bukkit.event.vehicle.VehicleDestroyEvent;
  * @author FurmigaHumana
  */
 public class CreativeEntityListener implements Listener {
-    public static List<Player> waiting = new ArrayList<Player>();
+    public static List<Player> waiting = new ArrayList<>();
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = false)
     public void onVehicleCreate(VehicleCreateEvent e) {
@@ -80,7 +80,7 @@ public class CreativeEntityListener implements Listener {
             if (!plugin.hasPerm(p, "Preventions.Vehicle")) {
                 int limit = config.prevent_limitvechile;
                 
-                HashSet<UUID> entities = new HashSet<UUID>();
+                HashSet<UUID> entities = new HashSet<>();
                 if (plugin.limits.containsKey(p.getName())) {
                     entities = plugin.limits.get(p.getName());
                 }
@@ -138,7 +138,7 @@ public class CreativeEntityListener implements Listener {
             return;
         }
 
-        List<Block> oldList = new ArrayList<Block>();
+        List<Block> oldList = new ArrayList<>();
         oldList.addAll(e.blockList());
         
         if (config.block_explosion) {
