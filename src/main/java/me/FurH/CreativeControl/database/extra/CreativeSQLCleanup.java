@@ -25,10 +25,10 @@ import me.FurH.Core.location.LocationUtils;
 import me.FurH.Core.util.Communicator;
 import me.FurH.CreativeControl.CreativeControl;
 import me.FurH.CreativeControl.database.CreativeSQLDatabase;
-import net.minecraft.server.v1_6_R1.WorldServer;
+import net.minecraft.server.v1_6_R2.WorldServer;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_6_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_6_R2.CraftWorld;
 import org.bukkit.entity.Player;
 
 /**
