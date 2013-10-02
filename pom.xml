@@ -16,6 +16,10 @@
 
     <repositories>
         <repository>
+            <id>milkbowl-repo</id>
+            <url>http://ci.herocraftonline.com/plugin/repository/everything</url>
+	</repository>
+        <repository>
             <id>releases-bkp</id>
             <url>https://dl.dropboxusercontent.com/u/55730138/sonatype-work/releases</url>
         </repository>
