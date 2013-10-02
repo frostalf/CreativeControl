@@ -346,7 +346,7 @@ public final class CreativeSQLDatabase extends CoreSQLDatabase {
     }
     
     public List<Integer> getAllPlayersId() {
-        List<Integer> ret = new ArrayList<Integer>();
+        List<Integer> ret = new ArrayList<>();
 
         Communicator com = CreativeControl.plugin.getCommunicator();
         PreparedStatement ps = null;

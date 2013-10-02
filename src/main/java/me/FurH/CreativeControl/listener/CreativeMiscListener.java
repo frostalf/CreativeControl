@@ -77,7 +77,7 @@ public class CreativeMiscListener implements Listener {
     }
     
     private void removeIgnition(Block b) {
-        HashSet<Integer> blocks = new HashSet<Integer>(Arrays.asList(new Integer[]{10, 11, 27, 28, 51, 69, 70, 72, 73, 74, 75, 76, 77, 55, 331, 356}));
+        HashSet<Integer> blocks = new HashSet<>(Arrays.asList(new Integer[]{10, 11, 27, 28, 51, 69, 70, 72, 73, 74, 75, 76, 77, 55, 331, 356}));
         
         int x = b.getX(); int y = b.getY(); int z = b.getZ(); int radius = 2;
         int minX = x - radius; int minY = y - radius; int minZ = z - radius;

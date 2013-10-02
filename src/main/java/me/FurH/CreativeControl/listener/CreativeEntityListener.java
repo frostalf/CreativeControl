@@ -56,7 +56,7 @@ import org.bukkit.metadata.FixedMetadataValue;
  */
 public class CreativeEntityListener implements Listener {
     
-    public static List<Player> waiting = new ArrayList<Player>();
+    public static List<Player> waiting = new ArrayList<>();
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = false)
     public void onVehicleCreate(VehicleCreateEvent e) {
@@ -161,7 +161,7 @@ public class CreativeEntityListener implements Listener {
             return;
         }
 
-        List<Block> oldList = new ArrayList<Block>();
+        List<Block> oldList = new ArrayList<>();
         oldList.addAll(e.blockList());
         
         if (config.block_explosion) {

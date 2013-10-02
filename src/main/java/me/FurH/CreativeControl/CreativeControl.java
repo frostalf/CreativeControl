@@ -95,11 +95,11 @@ public class CreativeControl extends CorePlugin {
     
     private static CreativePermissions permissions;
 
-    public WeakHashMap<Player, Location> right = new WeakHashMap<Player, Location>();
-    public WeakHashMap<Player, Location> left = new WeakHashMap<Player, Location>();
+    public WeakHashMap<Player, Location> right = new WeakHashMap<>();
+    public WeakHashMap<Player, Location> left = new WeakHashMap<>();
 
-    public Map<String, CoreHashSet<UUID>> limits = new HashMap<String, CoreHashSet<UUID>>();
-    public Map<String, Integer> mods = new HashMap<String, Integer>();
+    public Map<String, CoreHashSet<UUID>> limits = new HashMap<>();
+    public Map<String, Integer> mods = new HashMap<>();
 
     public CoreUpdater updater;
 
@@ -417,7 +417,7 @@ public class CreativeControl extends CorePlugin {
     }
     
     private void clear() {
-        CoreHashSet<UUID> entity = new CoreHashSet<UUID>();
+        CoreHashSet<UUID> entity = new CoreHashSet<>();
 
         for (String key : limits.keySet()) {
             entity.addAll(limits.get(key));

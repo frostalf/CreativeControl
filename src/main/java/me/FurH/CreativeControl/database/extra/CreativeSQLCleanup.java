@@ -90,7 +90,7 @@ public class CreativeSQLCleanup implements Runnable {
         double blocks_last = 0;
         double blocks_removed = 0;
 
-        HashSet<String> locations = new HashSet<String>();
+        HashSet<String> locations = new HashSet<>();
         
         while (true) {
 

@@ -60,7 +60,7 @@ import org.bukkit.material.PistonBaseMaterial;
  */
 public class CreativeBlockListener implements Listener {
     
-    private CoreLRUCache<String, CoreLRUCache<String, CreativeBlockLimit>> limits = new CoreLRUCache<String, CoreLRUCache<String, CreativeBlockLimit>>(true);
+    private CoreLRUCache<String, CoreLRUCache<String, CreativeBlockLimit>> limits = new CoreLRUCache<>(true);
 
     /*
      * Block Place Module
@@ -314,7 +314,7 @@ public class CreativeBlockListener implements Listener {
             }
         }
 
-        List<Block> attached = new ArrayList<Block>();
+        List<Block> attached = new ArrayList<>();
 
         if (config.block_nodrop || config.block_ownblock) {
             

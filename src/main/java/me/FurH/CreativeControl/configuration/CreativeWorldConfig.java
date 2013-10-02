@@ -30,7 +30,7 @@ import org.bukkit.World;
  */
 public class CreativeWorldConfig extends Configuration {
     
-    private CoreSafeCache<String, CreativeWorldNodes> config_cache = new CoreSafeCache<String, CreativeWorldNodes>();
+    private CoreSafeCache<String, CreativeWorldNodes> config_cache = new CoreSafeCache<>();
     private CreativeWorldNodes nodes = new CreativeWorldNodes();
 
     public CreativeWorldConfig(CorePlugin plugin) {

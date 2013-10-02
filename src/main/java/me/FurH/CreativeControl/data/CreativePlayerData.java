@@ -36,9 +36,9 @@ import org.bukkit.inventory.ItemStack;
  */
 public class CreativePlayerData {
 
-    public CoreSafeCache<String, CreativePlayerCache> adventurer_cache = new CoreSafeCache<String, CreativePlayerCache>(true);
-    public CoreSafeCache<String, CreativePlayerCache> creative_cache = new CoreSafeCache<String, CreativePlayerCache>(true);
-    public CoreSafeCache<String, CreativePlayerCache> survival_cache = new CoreSafeCache<String, CreativePlayerCache>(true);
+    public CoreSafeCache<String, CreativePlayerCache> adventurer_cache = new CoreSafeCache<>(true);
+    public CoreSafeCache<String, CreativePlayerCache> creative_cache = new CoreSafeCache<>(true);
+    public CoreSafeCache<String, CreativePlayerCache> survival_cache = new CoreSafeCache<>(true);
 
     public void clear() {
         adventurer_cache.clear();

@@ -34,7 +34,7 @@ import org.bukkit.Location;
  */
 public class CreativeRegionManager {    
     
-    private List<CreativeRegion> areas = new ArrayList<CreativeRegion>();
+    private List<CreativeRegion> areas = new ArrayList<>();
 
     public List<CreativeRegion> getAreas() {
         return areas;
@@ -146,7 +146,7 @@ public class CreativeRegionManager {
     }
 
     public void deleteRegionCache(String name) {
-        List<CreativeRegion> remove = new ArrayList<CreativeRegion>();
+        List<CreativeRegion> remove = new ArrayList<>();
         
         for (CreativeRegion region: areas) {
             if (region.name.equalsIgnoreCase(name)) {

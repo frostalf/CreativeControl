@@ -34,7 +34,7 @@ public class CreativeBlackList {
     }
     
     public HashSet<CreativeItemStack> buildHashSet(HashSet<String> source) {
-        HashSet<CreativeItemStack> ret = new HashSet<CreativeItemStack>();
+        HashSet<CreativeItemStack> ret = new HashSet<>();
         
         for (String string : source) {
 

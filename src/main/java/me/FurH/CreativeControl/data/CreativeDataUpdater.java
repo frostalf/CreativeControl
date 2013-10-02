@@ -51,7 +51,7 @@ public class CreativeDataUpdater {
             com.error(ex);
         }
         
-        List<String> tables = new ArrayList<String>();
+        List<String> tables = new ArrayList<>();
         
         tables.add(db.prefix + "players_adventurer");
         tables.add(db.prefix + "players_survival");
