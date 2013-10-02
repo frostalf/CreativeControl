@@ -22,6 +22,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import me.FurH.Core.database.CoreSQLDatabase.type;
 import me.FurH.Core.exceptions.CoreException;
 import me.FurH.Core.util.Communicator;
@@ -94,8 +96,11 @@ public class CreativeSQLMigrator implements Runnable {
         } catch (SQLException ex) {
             com.error(ex, "Failed to set autocommit state");
         }
-        
-        db.load(to, type);
+        try {
+            db.load(to, type);
+        } catch (CoreException ex) {
+            Logger.getLogger(CreativeSQLMigrator.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         try {
             to.commit();

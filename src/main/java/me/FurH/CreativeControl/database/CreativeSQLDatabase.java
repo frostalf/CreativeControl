@@ -23,6 +23,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import me.FurH.Core.CorePlugin;
 import me.FurH.Core.database.CoreSQLDatabase;
 import me.FurH.Core.exceptions.CoreException;
@@ -225,13 +227,19 @@ public final class CreativeSQLDatabase extends CoreSQLDatabase {
         }
     }
     
-    public void load() {
+    public void load() throws CoreException {
+        try{
         load(this.connection, this.getDatabaseEngine());
+        } catch (CoreException ex) {
+            throw new CoreException(ex, "Could not establish Connection with the database");
+        }
     }
 
-    public void load(Connection connection, type type) {
-        Communicator com = CreativeControl.getPlugin().getCommunicator();
+    public void load(Connection connection, type type) throws CoreException {
         
+        Communicator com = CreativeControl.getPlugin().getCommunicator();
+        try{
+        if(checkTable(connection) == false){
         try {
             /* groups table */
             createTable(connection, "CREATE TABLE IF NOT EXISTS `"+prefix+"groups` (player INT, groups VARCHAR(255));", type);
@@ -291,8 +299,12 @@ public final class CreativeSQLDatabase extends CoreSQLDatabase {
             com.error(ex, "[TAG] Failed to create `"+prefix+"internal` table");
         }
     }
+        } catch (CoreException ex) {
+            throw new CoreException(ex, "There was an error either checking or creating tables");
+        }
+    }
 
-    public void load(Connection connection, String world, type type) {
+    public void load(Connection connection, String world, type type) throws CoreException {
         Communicator com = CreativeControl.getPlugin().getCommunicator();
 
         if (connection == null) {
@@ -302,7 +314,8 @@ public final class CreativeSQLDatabase extends CoreSQLDatabase {
         if (type == null) {
             type = this.getDatabaseEngine();
         }
-
+        try{
+        if (checkTable(connection) == false){
         try {
             createTable(connection, "CREATE TABLE IF NOT EXISTS `"+prefix+"blocks_"+world+"` (owner INT, x INT, y INT, z INT, type INT, allowed VARCHAR(255), time BIGINT);", type);
         } catch (CoreException ex) {
@@ -316,6 +329,10 @@ public final class CreativeSQLDatabase extends CoreSQLDatabase {
             createIndex(connection, "CREATE INDEX `"+prefix+"owner_"+world+"` ON `"+prefix+"blocks_"+world+"` (owner);");
         } catch (CoreException ex) {
             com.error(ex, "Failed to create `"+prefix+"blocks_"+world+"` index");
+        }
+    }
+        } catch (CoreException ex){
+            throw new CoreException(ex, "An Error has occurred either checking or creating tables");
         }
     }
     
