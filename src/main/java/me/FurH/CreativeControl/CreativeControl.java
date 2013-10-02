@@ -92,7 +92,6 @@ public class CreativeControl extends CorePlugin {
     private static boolean prismEnabled;
     private static CoreProtectAPI coreprotect;
     private static CreativeBlackList blacklist;
-    
     private static CreativePermissions permissions;
 
     public WeakHashMap<Player, Location> right = new WeakHashMap<>();
